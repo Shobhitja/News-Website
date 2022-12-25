@@ -4,6 +4,10 @@ import Footer from './Footer'
 import Navbar from './Navbar'
 
 const Signup = () => {
+
+    const onSubmit = () => {
+        window.location.reload();
+    }
     return (
         <>
             <div>  <Navbar /></div>
@@ -49,7 +53,7 @@ const Signup = () => {
                                     </div>
                                 </div>
                                 <div className="p-2 w-full">
-                                    <button className="flex mx-auto text-white bg-yellow-500 border-0 py-2 px-8 focus:outline-none hover:bg-yellow-600 rounded text-lg">Submit</button>
+                                    <button className="flex mx-auto text-white bg-yellow-500 border-0 py-2 px-8 focus:outline-none hover:bg-yellow-600 rounded text-lg" onClick={onSubmit}>Submit</button>
                                 </div>
 
                             </div>

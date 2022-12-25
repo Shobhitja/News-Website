@@ -14,7 +14,7 @@ const News = (props) => {
     const getInfo = async () => {
         setLoading(true)
         try {
-            let url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey} &page=${pageNUM}&pageSize=9`
+            let url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=d1f75c0efb29430bb6379431de11d3d8&page=${pageNUM}&pageSize=9`
             const res = await fetch(url);
             const data = await res.json();
             // console.log(data);
@@ -29,8 +29,10 @@ const News = (props) => {
 
 
     const nextClick = async () => {
+
         setPageNUM(pageNUM + 1)
-        getInfo();
+        await getInfo();
+
 
 
     }
